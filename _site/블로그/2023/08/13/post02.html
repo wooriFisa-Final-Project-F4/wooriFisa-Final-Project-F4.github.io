@@ -7,21 +7,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <meta name="google-translate-customization" content="108d9124921d80c3-80e20d618ff053c8-g4f02ec6f3dba68b7-c">
 <!-- Begin Jekyll SEO tag v2.8.0 -->
-<title>Home | Arte Moderni 기술블로그</title>
+<title>ReplyingKafkaTemplate 예제 만들어보기 | Arte Moderni 기술블로그</title>
 <meta name="generator" content="Jekyll v4.3.2">
-<meta property="og:title" content="Home">
-<meta name="author" content="클라우드 엔지니어링 6팀">
+<meta property="og:title" content="ReplyingKafkaTemplate 예제 만들어보기">
+<meta name="author" content="김혁준">
 <meta property="og:locale" content="en_US">
-<meta name="description" content="우리 FIS와 글로벌소프트웨어 캠퍼스가 함께하는 “우리 FISA - 클라우드 엔지니어링” 파이널 프로젝트 6팀의 기술블로그입니다. 기술 지식에 대한 탐구와 학습 그리고 프로젝트 진행상황을 확인하실 수 있습니다.">
-<meta property="og:description" content="우리 FIS와 글로벌소프트웨어 캠퍼스가 함께하는 “우리 FISA - 클라우드 엔지니어링” 파이널 프로젝트 6팀의 기술블로그입니다. 기술 지식에 대한 탐구와 학습 그리고 프로젝트 진행상황을 확인하실 수 있습니다.">
-<link rel="canonical" href="http://localhost:4000/">
-<meta property="og:url" content="http://localhost:4000/">
+<meta name="description" content="안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.">
+<meta property="og:description" content="안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.">
+<link rel="canonical" href="http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html">
+<meta property="og:url" content="http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html">
 <meta property="og:site_name" content="Arte Moderni 기술블로그">
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
+<meta property="article:published_time" content="2023-08-13T00:00:00+09:00">
 <meta name="twitter:card" content="summary">
-<meta property="twitter:title" content="Home">
+<meta property="twitter:title" content="ReplyingKafkaTemplate 예제 만들어보기">
 <script type="application/ld+json">
-{"@context":"https://schema.org","@type":"WebSite","author":{"@type":"Person","name":"클라우드 엔지니어링 6팀"},"description":"우리 FIS와 글로벌소프트웨어 캠퍼스가 함께하는 “우리 FISA - 클라우드 엔지니어링” 파이널 프로젝트 6팀의 기술블로그입니다. 기술 지식에 대한 탐구와 학습 그리고 프로젝트 진행상황을 확인하실 수 있습니다.","headline":"Home","name":"Arte Moderni 기술블로그","url":"http://localhost:4000/"}</script>
+{"@context":"https://schema.org","@type":"BlogPosting","author":{"@type":"Person","name":"김혁준"},"dateModified":"2023-08-13T00:00:00+09:00","datePublished":"2023-08-13T00:00:00+09:00","description":"안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.","headline":"ReplyingKafkaTemplate 예제 만들어보기","mainEntityOfPage":{"@type":"WebPage","@id":"http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html"},"url":"http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html"}</script>
 <!-- End Jekyll SEO tag -->
 <link rel="icon" href="assets/images/favicon/image.png">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -386,7 +387,7 @@ document.addEventListener('DOMContentLoaded', function(event) {
 
 
 
-<header class="site-header site-header-transparent" role="banner">
+<header class="site-header " role="banner">
 
   <div class="wrapper">
     <div class="site-header-inner">
@@ -570,7 +571,7 @@ function googleTranslateElementInit() {
     var documentElement = document.documentElement;
 
     function storeScrollData() {
-      var y = getScrollPos().y;documentElement.setAttribute("data-header-transparent", "");var scrollStatus = "";
+      var y = getScrollPos().y;var scrollStatus = "";
 
       if (y <= 0) {
         scrollStatus = "top";
@@ -737,22 +738,7 @@ function googleTranslateElementInit() {
 
 
 
-<section class="page-banner">
-    <div class="page-banner-img">
-<div style="background-image: url(/assets/images/banners/home.jpeg)"></div>
-        <img class="img-placeholder" src="/assets/images/banners/home.jpeg">
-</div>
-    <div class="wrapper">
-      <div class="page-banner-inner"><div class="page-banner-default">
-            <h1 class="page-banner-heading">
-              Arte Moderni의 기술 블로그
-            </h1>
-            <h2 class="page-banner-subheading">
-              우리 FISA 1기 클라우드 엔지니어링 6팀
-            </h2>
-          </div></div>
-    </div>
-  </section><script>
+<script>
   function hashLocate(hashValue) {
     hashValue = hashValue.replace(/^.*#h-/, '');
     hashValue = decodeURIComponent(hashValue);
@@ -926,25 +912,27 @@ function googleTranslateElementInit() {
         <div class="framework">
   <section class="main">
 
-     <div class="articles">
-  
+     <div class="post">
+  <section>
 
-  
 
 
-  <div class="pagination">
-  <!-- Post list links -->
-  <ul class="post-list">
-<li>
-      
 
 
 
 
 
 
+<header class="post-header">
+  <h1 class="post-title p-name" itemprop="name headline">ReplyingKafkaTemplate 예제 만들어보기</h1>
+  <h2 class="post-subtitle">간단한 예제</h2>
 
+  <p class="post-meta">
+    <time class="dt-published" datetime="2023-08-13T00:00:00+09:00" itemprop="datePublished"><i class="fa fa-calendar"></i> Aug 13, 2023
+    </time>
 
+    
+    
 
 
 
@@ -977,192 +965,232 @@ function googleTranslateElementInit() {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 class="post-title">
-        <a class="post-link" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html">
-          ReplyingKafkaTemplate 예제 만들어보기
-        </a>
-      </h2>
-      <div class="post-meta">
-        <span class="post-date"><i class="fa fa-calendar"></i> Aug 13, 2023</span>
-        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
-      </div>
-      <a class="post-excerpt" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html">
-        <p>
-        안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.
-
-예제 간단 소개
-
-Database에 User, Order 테이블 존재
-User 테이블에는 UserId와 Money(보유한 금액)이 존재
-Order 테이블에는 UserId, Paid(결제 금액), Result(결과) 존재
-User가 결제 금액을 요청했을 때 보유 금액이 결제 금액보다 크거나 같은 경우 “성공했습니다.” 반환받고
-그렇지 않은 경우 “실패했습니다.” 반환받음
-
-Apach... <span class="read_more">Read More</span>
-        </p>
-      </a>
-      <div class="post-tags">
+    <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
+  </p>
+<div class="post-tags">
 <a class="post-tag" href="/tags.html#blog">#blog</a><a class="post-tag" href="/tags.html#kafka">#kafka</a>
+</div></header>
+<article class="post h-entry" itemscope itemtype="http://schema.org/BlogPosting">
+
+    <div class="post-content e-content" itemprop="articleBody">
+
+      <p>안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 <b>Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까</b>에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.</p>
+
+<h2 id="예제-간단-소개">예제 간단 소개</h2>
+
+<p>Database에 User, Order 테이블 존재<br>
+User 테이블에는 UserId와 Money(보유한 금액)이 존재<br>
+Order 테이블에는 UserId, Paid(결제 금액), Result(결과) 존재<br>
+User가 결제 금액을 요청했을 때 보유 금액이 결제 금액보다 크거나 같은 경우 “성공했습니다.” 반환받고<br>
+그렇지 않은 경우 “실패했습니다.” 반환받음<br></p>
+
+<h2 id="apache-kafka를-사용한-동기식-요청-응답">Apache Kafka를 사용한 동기식 요청-응답</h2>
+
+<p>Apache Kafka는 스트리밍 데이터와 다양한 생산자와 소비자 간의 디커플링을 위해 구축되었기 때문에 정말 필요한 상황이 아니면 Kafka와 요청-응답 개념을 사용하지 않는 것이 좋습니다.<br>
+하지만 필요한 상황에서는 Spring kafka 템플릿을 사용하여 동기식 요청-응답을 구현할 수 있습니다.<br>
+간단한 예제를 통해 사용 방법을 익혀보았습니다.<br>
+<br>
+<img src="https://github.com/wooriFisa-Final-Project-F4/wooriFisa-Final-Project-F4.github.io/assets/119636839/0352eced-733b-4f58-a3ab-2e7031c32613" alt="flow">
+<br>
+PostMan을 통해 Controller에 JSON타입으로 요청을 보내면<br>
+Controller에서 ProducerRecord를 통해 헤더에 Reply_Topic을 “order”로 설정해 주고 “user” topic에 이벤트 발행<br>
+“user” topic을 구독하던 Consumer에서 간단한 로직 처리 후 @SendTo에 의해 헤더에 있는 Reply_Topic에 결과 반환<br>
+Controller에서 ConsumerRecord를 통해 결과값 받은 후 Client에 반환</p>
+
+<h3 id="controller">Controller</h3>
+
+<pre><code class="language-Java">@PostMapping(value="/order",produces=MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.APPLICATION_JSON_VALUE)
+	public String sum(@RequestBody OrderEntity request) throws InterruptedException, ExecutionException {
+		// create producer record
+		ProducerRecord&lt;String, OrderEntity&gt; record = new ProducerRecord&lt;String, OrderEntity&gt;(requestTopic, request);
+		// set reply topic in header
+		record.headers().add(new RecordHeader(KafkaHeaders.REPLY_TOPIC, requestReplyTopic.getBytes()));
+		// post in kafka topic
+		RequestReplyFuture&lt;String, OrderEntity, OrderEntity&gt; sendAndReceive = kafkaTemplate.sendAndReceive(record);
+
+		// confirm if producer produced successfully
+		SendResult&lt;String, OrderEntity&gt; sendResult = sendAndReceive.getSendFuture().get();
+		
+		//print all headers
+		sendResult.getProducerRecord().headers().forEach(header -&gt; System.out.println(header.key() + ":" + header.value().toString()));
+		// get consumer record
+		ConsumerRecord&lt;String, OrderEntity&gt; consumerRecord = sendAndReceive.get();
+		
+		// return consumer value
+		return consumerRecord.value().getResult();
+	}
+</code></pre>
+
+<h3 id="consumer">Consumer</h3>
+
+<pre><code class="language-Java">@KafkaListener(topics = "${kafka.topic.request-topic}")
+	@SendTo
+	public OrderEntity listen(OrderEntity request) throws InterruptedException {
+		if(uRepository.findById(request.getUserId()).isPresent()) {
+			UserEntity user = uRepository.findById(request.getUserId()).get();
+			if(user.getMoney() &lt; request.getPaid()) {
+				request.setResult("Failure");
+			}else {
+				user.setMoney(user.getMoney()-request.getPaid());
+				request.setResult("Success");
+			}
+			uRepository.save(user);
+			oRepository.save(request);
+			return request;
+		}else {
+			request.setResult("없는 사용자");
+			return request;
+		}
+	}
+</code></pre>
+
+<p><br><br></p>
+<h2 id="git">Git</h2>
+<p>Configuration 등 설정이나 전체 코드는 <br>
+https://github.com/rlagurnws/kafkatest.git v2.1 tag에서 확인 가능합니다.</p>
+
+
+    </div>
+
+</article>
+<div class="post-nav">
+<a class="previous" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01.html" title="기술 블로그를 개설했습니다!">기술 블로그를 개설했습니다!</a><span></span>
 </div>
-    </li>
-<li>
-      
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<h2 class="post-title">
-        <a class="post-link" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01.html">
-          기술 블로그를 개설했습니다!
-        </a>
-      </h2>
-      <div class="post-meta">
-        <span class="post-date"><i class="fa fa-calendar"></i> Aug 13, 2023</span>
-        <span class="post-reading-time left-vsplit"><i class="fa fa-clock-o"></i> About 1 min</span>
-      </div>
-      <a class="post-excerpt" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01.html">
-        <p>
-        😀 첫 포스팅
-
-안녕하세요! 6팀의 PM 김지운입니다🧑🏻‍💻
-
-우리은행과 글로벌 소프트웨어 캠퍼스가 주관하는 “우리 FISA 1기 - 클라우드 엔지니어링”의 여섯 번째 팀. 팀 F4의 기술 블로그를 개설했습니다.
-
-저희 팀은 프론트엔드부터 인프라(퍼블릭 클라우드 &amp; 온프레미스)에 대한 지식을 학습하고 사용함으로써 개발의 A-Z 프로세스를 이해하려 노력합니다.
-
-저희의 지식 탐구에 대한 내용을 많은 사람들과 공유하고 논의하기 위해 블로그를 개설하였습니다. 추가적으로 이러한 학습 내용들이 파이널 프로젝트에는 어떻게 녹아들었는지 보여드리려 합니다. 주마다 올라올 저와 팀원들의 포스팅을 관심있게 지켜봐 주시면 감사... <span class="read_more">Read More</span>
-        </p>
-      </a>
-      <div class="post-tags">
-<a class="post-tag" href="/tags.html#blog">#blog</a><a class="post-tag" href="/tags.html#project">#project</a>
-</div>
-    </li>
+<div class="post-related">
+      <div>Related Articles</div>
+      <ul>
+        <li><a class="post-link" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html" title="">ReplyingKafkaTemplate 예제 만들어보기</a></li>
+<li><a class="post-link" href="/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01.html" title="">기술 블로그를 개설했습니다!</a></li>
 </ul>
-
-  <!-- Pagination links -->
-</div>
+    </div>
+<div class="post-comments"></div></section>
 </div>
 
 
   </section>
   <section class="sidebar" style="margin-left: 15px;">
-    <!-- Get sidebar items -->
+    <!-- Get sidebar items --><style type="text/css" media="screen">
+.post-menu ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+</style>
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div class="common-list">
-  <ul>
-    <li>
-      <a href="/index.html">
-        All<span>2</span>
-      </a>
-    </li>
-
-    
-      <li>
-        <a href="/categories.html#h-%EB%B8%94%EB%A1%9C%EA%B7%B8">
-          블로그 <span>2</span>
-        </a>
-      </li>
-    
-  </ul>
+<div class="post-menu">
+  <div class="post-menu-title">TOC</div>
+  <div class="post-menu-content"></div>
 </div>
 
+<script>
+  function generateContent() {
+    var menu = document.querySelector(".post-menu");
+    var menuContent =  menu.querySelector(".post-menu-content");
+    var headings = document.querySelector(".post-content").querySelectorAll("h2, h3, h4, h5, h6");
+
+    // Hide menu when no headings
+    if (headings.length === 0) {
+      return menu.style.display = "none";
+    }
+
+    // Generate post menu
+    var menuHTML = '';
+    for (var i = 0; i < headings.length; i++) {
+      var h = headings[i];
+      menuHTML += (
+        '<li class="h-' + h.tagName.toLowerCase() + '">'
+        + '<a href="#h-' + h.getAttribute('id') + '">' + h.textContent + '</a></li>');
+    }
+
+    menuContent.innerHTML = '<ul>' + menuHTML + '</ul>';
+
+    // The header element
+    var header = document.querySelector('header.site-header');
+
+    function doMenuCollapse(index, over_items) {
+      var items = menuContent.firstChild.children;
+
+      if (over_items == undefined) {
+        over_items = 20;
+      }
+
+      if (items.length < over_items) {
+        return;
+      }
+
+      var activeItem = items[index];
+      var beginItem = activeItem
+      var endItem = activeItem
+      var beginIndex = index;
+      var endIndex = index + 1;
+      while (beginIndex >= 0
+        && !items[beginIndex].classList.contains('h-h2')) {
+        beginIndex -= 1;
+      }
+      while (endIndex < items.length
+        && !items[endIndex].classList.contains('h-h2')) {
+        endIndex += 1;
+      }
+      for (var i = 0; i < beginIndex; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+      for (var i = beginIndex + 1; i < endIndex; i++) {
+        item = items[i]
+        // if (!item.classList.contains('h-h2')) {
+          item.style.display = '';
+        // }
+      }
+      for (var i = endIndex; i < items.length; i++) {
+        item = items[i]
+        if (!item.classList.contains('h-h2')) {
+          item.style.display = 'none';
+        }
+      }
+    }
+
+    // Init menu collapsed
+    doMenuCollapse(-1);
+
+    // Active the menu item
+    window.addEventListener('scroll', function (event) {
+      var lastActive = menuContent.querySelector('.active');
+      var changed = true;
+      var activeIndex = -1;
+      for (var i = headings.length - 1; i >= 0; i--) {
+        var h = headings[i];
+        var headingRect = h.getBoundingClientRect();
+        var headerRect = header.getBoundingClientRect();
+        var headerTop = Math.floor(headerRect.top);
+        var headerHeight = Math.floor(headerRect.height);
+        var headerHeight = headerTop + headerHeight + 20;
+        if (headingRect.top <= headerHeight) {
+          var id = 'h-' + h.getAttribute('id');
+          var a = menuContent.querySelector('a[href="#' + id  + '"]');
+          var curActive = a.parentNode;
+          if (curActive) {
+            curActive.classList.add('active');
+            activeIndex = i;
+          }
+          if (lastActive == curActive) {
+            changed = false;
+          }
+          break;
+        }
+      }
+      if (changed) {
+        if (lastActive) {
+          lastActive.classList.remove('active');
+        }
+        doMenuCollapse(activeIndex);
+      }
+      event.preventDefault();
+    });
+  }
+  generateContent();
+</script>
 </section>
 </div>
 

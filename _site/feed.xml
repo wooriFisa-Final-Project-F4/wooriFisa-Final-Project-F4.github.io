@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-13T13:05:17+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Arte Moderni 기술블로그</title><subtitle>Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description.</subtitle><author><name>클라우드 엔지니어링 6팀</name></author><entry><title type="html">기술 블로그를 개설했습니다!</title><link href="http://localhost:4000/blog/2023/08/13/post01.html" rel="alternate" type="text/html" title="기술 블로그를 개설했습니다!" /><published>2023-08-13T00:00:00+09:00</published><updated>2023-08-13T00:00:00+09:00</updated><id>http://localhost:4000/blog/2023/08/13/post01</id><content type="html" xml:base="http://localhost:4000/blog/2023/08/13/post01.html"><![CDATA[<h2 id="-첫-포스팅">😀 첫 포스팅</h2>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.3.2">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2023-08-14T19:52:29+09:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Arte Moderni 기술블로그</title><subtitle>우리 FIS와 글로벌소프트웨어 캠퍼스가 함께하는 &quot;우리 FISA - 클라우드 엔지니어링&quot; 파이널 프로젝트 6팀의 기술블로그입니다. 기술 지식에 대한 탐구와 학습 그리고 프로젝트 진행상황을 확인하실 수 있습니다.</subtitle><author><name>클라우드 엔지니어링 6팀</name></author><entry><title type="html">기술 블로그를 개설했습니다!</title><link href="http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01.html" rel="alternate" type="text/html" title="기술 블로그를 개설했습니다!" /><published>2023-08-13T00:00:00+09:00</published><updated>2023-08-13T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01</id><content type="html" xml:base="http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post01.html"><![CDATA[<h2 id="-첫-포스팅">😀 첫 포스팅</h2>
 
 <p>안녕하세요! 6팀의 PM 김지운입니다🧑🏻‍💻<br />
 <br />
@@ -10,4 +10,77 @@
 
 <h3 id="프로젝트-간단-소개">프로젝트 간단 소개</h3>
 
-<p>저희팀은 서버 문제 발생으로 서비스들이 장애가 발생하는 원인을 해결하고 하였고, 전자 상거래 서비스가 저희의 솔루션을 테스트 해보기 좋은 주제라고 생각했습니다. 따라서, “미술품 경매 거래 사이트”라는 주제로 “실시간 경매”, “미술품 구매”와 같은 두가지 핵심 기능을 구현하고, 서버 이중화와 서비스 사용량에 따른 인프라 관리 그리고 백엔드에서의 트래픽 분산 등을 적용해볼 계획입니다.</p>]]></content><author><name>김지운</name></author><category term="blog" /><category term="blog" /><category term="project" /><summary type="html"><![CDATA[😀 첫 포스팅]]></summary></entry></feed>
+<p>저희팀은 서버 문제 발생으로 서비스들이 장애가 발생하는 원인을 해결하고자 하였고, 전자 상거래 서비스가 저희의 솔루션을 테스트 해보기 좋은 주제라고 생각했습니다. 따라서, “미술품 경매 거래 사이트”라는 주제로 “실시간 경매”, “미술품 구매”와 같은 두가지 핵심 기능을 구현하고, 서버 이중화와 서비스 사용량에 따른 인프라 관리 그리고 백엔드에서의 트래픽 분산 등을 적용해볼 계획입니다.</p>]]></content><author><name>김지운</name></author><category term="블로그" /><category term="blog" /><category term="project" /><summary type="html"><![CDATA[😀 첫 포스팅]]></summary></entry><entry><title type="html">ReplyingKafkaTemplate 예제 만들어보기</title><link href="http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html" rel="alternate" type="text/html" title="ReplyingKafkaTemplate 예제 만들어보기" /><published>2023-08-13T00:00:00+09:00</published><updated>2023-08-13T00:00:00+09:00</updated><id>http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02</id><content type="html" xml:base="http://localhost:4000/%EB%B8%94%EB%A1%9C%EA%B7%B8/2023/08/13/post02.html"><![CDATA[<p>안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 <b>Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까</b>에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.</p>
+
+<h2 id="예제-간단-소개">예제 간단 소개</h2>
+
+<p>Database에 User, Order 테이블 존재<br />
+User 테이블에는 UserId와 Money(보유한 금액)이 존재<br />
+Order 테이블에는 UserId, Paid(결제 금액), Result(결과) 존재<br />
+User가 결제 금액을 요청했을 때 보유 금액이 결제 금액보다 크거나 같은 경우 “성공했습니다.” 반환받고<br />
+그렇지 않은 경우 “실패했습니다.” 반환받음<br /></p>
+
+<h2 id="apache-kafka를-사용한-동기식-요청-응답">Apache Kafka를 사용한 동기식 요청-응답</h2>
+
+<p>Apache Kafka는 스트리밍 데이터와 다양한 생산자와 소비자 간의 디커플링을 위해 구축되었기 때문에 정말 필요한 상황이 아니면 Kafka와 요청-응답 개념을 사용하지 않는 것이 좋습니다.<br />
+하지만 필요한 상황에서는 Spring kafka 템플릿을 사용하여 동기식 요청-응답을 구현할 수 있습니다.<br />
+간단한 예제를 통해 사용 방법을 익혀보았습니다.<br />
+<br />
+<img src="https://github.com/wooriFisa-Final-Project-F4/wooriFisa-Final-Project-F4.github.io/assets/119636839/0352eced-733b-4f58-a3ab-2e7031c32613" alt="flow" />
+<br />
+PostMan을 통해 Controller에 JSON타입으로 요청을 보내면<br />
+Controller에서 ProducerRecord를 통해 헤더에 Reply_Topic을 “order”로 설정해 주고 “user” topic에 이벤트 발행<br />
+“user” topic을 구독하던 Consumer에서 간단한 로직 처리 후 @SendTo에 의해 헤더에 있는 Reply_Topic에 결과 반환<br />
+Controller에서 ConsumerRecord를 통해 결과값 받은 후 Client에 반환</p>
+
+<h3 id="controller">Controller</h3>
+
+<pre><code class="language-Java">@PostMapping(value="/order",produces=MediaType.APPLICATION_JSON_VALUE,consumes=MediaType.APPLICATION_JSON_VALUE)
+	public String sum(@RequestBody OrderEntity request) throws InterruptedException, ExecutionException {
+		// create producer record
+		ProducerRecord&lt;String, OrderEntity&gt; record = new ProducerRecord&lt;String, OrderEntity&gt;(requestTopic, request);
+		// set reply topic in header
+		record.headers().add(new RecordHeader(KafkaHeaders.REPLY_TOPIC, requestReplyTopic.getBytes()));
+		// post in kafka topic
+		RequestReplyFuture&lt;String, OrderEntity, OrderEntity&gt; sendAndReceive = kafkaTemplate.sendAndReceive(record);
+
+		// confirm if producer produced successfully
+		SendResult&lt;String, OrderEntity&gt; sendResult = sendAndReceive.getSendFuture().get();
+		
+		//print all headers
+		sendResult.getProducerRecord().headers().forEach(header -&gt; System.out.println(header.key() + ":" + header.value().toString()));
+		// get consumer record
+		ConsumerRecord&lt;String, OrderEntity&gt; consumerRecord = sendAndReceive.get();
+		
+		// return consumer value
+		return consumerRecord.value().getResult();
+	}
+</code></pre>
+
+<h3 id="consumer">Consumer</h3>
+
+<pre><code class="language-Java">@KafkaListener(topics = "${kafka.topic.request-topic}")
+	@SendTo
+	public OrderEntity listen(OrderEntity request) throws InterruptedException {
+		if(uRepository.findById(request.getUserId()).isPresent()) {
+			UserEntity user = uRepository.findById(request.getUserId()).get();
+			if(user.getMoney() &lt; request.getPaid()) {
+				request.setResult("Failure");
+			}else {
+				user.setMoney(user.getMoney()-request.getPaid());
+				request.setResult("Success");
+			}
+			uRepository.save(user);
+			oRepository.save(request);
+			return request;
+		}else {
+			request.setResult("없는 사용자");
+			return request;
+		}
+	}
+</code></pre>
+
+<p><br /><br /></p>
+<h2 id="git">Git</h2>
+<p>Configuration 등 설정이나 전체 코드는 <br />
+https://github.com/rlagurnws/kafkatest.git v2.1 tag에서 확인 가능합니다.</p>]]></content><author><name>김혁준</name></author><category term="블로그" /><category term="blog" /><category term="kafka" /><summary type="html"><![CDATA[안녕하세요 F4팀의 혁잔디입니다. Kafka를 활용한 프로젝트를 설계하면서 Client의 요청에 대한 응답을 Kafka로 어떻게 처리할 수 있을까에 대한 궁금증이 생겨 관련 자료를 찾아보았고 이해를 위해 간단한 예제를 만들어보았습니다.]]></summary></entry></feed>
