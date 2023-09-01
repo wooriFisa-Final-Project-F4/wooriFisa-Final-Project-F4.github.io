@@ -151,7 +151,7 @@ gitment:
   username: "wooriFisa-Final-Project-F4"
   repo: "blog-comments"
   client_id: "d0ead81d8460d9db9359"
-  client_secret: "3f4e0b472cf49542fa62ca0a3b0d0dc44150f27e"
+  client_secret: ${CLIENT_SECRET}
   redirect_uri: "https://woorifisa-final-project-f4.github.io/" # If you use a custom domain name
 
 # Utterances comments
