@@ -147,12 +147,12 @@ paginate: 5
 #   shortname: "Your Disqus username"
 
 # Gitment comments
-gitment:
-  username: "wooriFisa-Final-Project-F4"
-  repo: "blog-comments"
-  client_id: "d0ead81d8460d9db9359"
-  client_secret: ${CLIENT_SECRET}
-  redirect_uri: "https://woorifisa-final-project-f4.github.io/" # If you use a custom domain name
+# gitment:
+#   username: "wooriFisa-Final-Project-F4"
+#   repo: "wooriFisa-Final-Project-F4.github.io"
+#   client_id: "d0ead81d8460d9db9359"
+#   client_secret: "4fcc11e8d2de6531a0fd66355f8ac44a2e6bbd8b"
+#   redirect_uri: "https://woorifisa-final-project-f4.github.io/" # If you use a custom domain na me
 
 # Utterances comments
 # See https://utteranc.es/
